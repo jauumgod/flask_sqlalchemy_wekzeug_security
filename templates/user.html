@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h2>ID = {{user.id}}</h2>
+    <h2>Nome = {{user.name}}</h2>
+    <h2>Email = {{user.email}}</h2>
+    <h2>senha = {{user.password}}</h2>
+    <h2>{{user.profile.photo}}</h2>
+    <nav>
+        <a href="{{url_for('delete', id=user.id)}}">DELETAR</a> 
+        <a href="{{url_for('logout')}}">SAIR</a>
+    </nav>
+ 
+</body>
+</html>
